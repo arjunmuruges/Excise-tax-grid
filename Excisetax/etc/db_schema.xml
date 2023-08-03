@@ -1,0 +1,29 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="alfakher_excise_rules_data" resource="default" engine="innodb" comment="Alfakher Excise Rule">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="varchar" name="country"  nullable="true"  comment="Country Id"/>
+        <column xsi:type="varchar" name="jurisdiction"   nullable="true"   comment="Jurisdiction State Id"/>
+        <column xsi:type="int" name="b2c_eligible" padding="10" unsigned="true" nullable="true" identity="false"  comment="B2C Eligible"/>
+        <column xsi:type="decimal" name="tax_rate" nullable="false" scale="4" precision="10" comment="Tax Rate"/>
+        <column xsi:type="varchar" name="tax_tier"  nullable="true"  comment="Tax Tier"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Update Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="alfakher_excise_log" resource="default" engine="innodb" comment="Alfakher Excise Log">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Id"/>
+        <column xsi:type="varchar" name="log_type"  nullable="true"  comment="Log_Type"/>
+        <column xsi:type="varchar" name="request"   nullable="true"   comment="Request"/>
+        <column xsi:type="varchar" name="response"  nullable="true"  comment="Response"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Creation Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

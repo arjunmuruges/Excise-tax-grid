@@ -1,0 +1,14 @@
+{
+    "alfakher_excise_rules_data": {
+        "column": {
+            "country": true,
+            "jurisdiction": true,
+            "b2c_eligible": true,
+            "tax_rate": true,
+            "tax_tier": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Alfakher_Excisetax::manager" title="Excise Tax management" module="Alfakher_Excisetax" sortOrder="10" resource="Alfakher_Excisetax::manager"/>
+        <add id="Alfakher_Excisetax::add_row" title="Excise Tax Details" module="Alfakher_Excisetax" sortOrder="20" parent="Alfakher_Excisetax::manager" action="excisetax/grid" resource="Alfakher_Excisetax::add_row"/>
+        <add id="Alfakher_Excisetax::add_newrow" title="Excise Tax Log" module="Alfakher_Excisetax" sortOrder="20" parent="Alfakher_Excisetax::manager" action="excisetax/log" resource="Alfakher_Excisetax::add_newrow"/>
+
+    </menu>
+</config>

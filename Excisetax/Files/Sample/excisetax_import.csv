@@ -1,0 +1,4 @@
+id,country,jurisdiction,b2c_eligible,tax_rate,tax_tier
+1,"AL","1546",1,20.00,"unit"
+2,"IN","10",0,10.00,"tier3"
+
